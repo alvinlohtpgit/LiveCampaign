@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3>Live Log - Total Votes {{ totalvotes }}</h3>
+    <h3>Live Log - Total Votes {{ votes.length }}</h3>
     <div id="livelogdisplay">
       <ul>
         <li v-for="vote in votes">Someone located in {{ vote.location }} voted <strong>{{ vote.choice }}</strong> {{ vote.createdAt.toDate() | moment("from")  }}</li>
@@ -17,7 +17,6 @@ export default {
   name: "LiveLog",
   data() {
     return {
-      totalvotes: 0,
       votes:[]
     };
   },
