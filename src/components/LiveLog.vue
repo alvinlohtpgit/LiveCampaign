@@ -1,6 +1,7 @@
 <template>
   <div>
     <h3>Live Log - Total Votes {{ votes.length }}</h3>
+    <h5>To Vote: Send A/B/C/D to +1 205 3012272</h5>
     <div id="livelogdisplay">
       <ul>
         <li v-for="vote in votes">Someone located in {{ vote.location }} voted <strong>{{ vote.choice }}</strong> {{ vote.createdAt.toDate() | moment("from")  }}</li>
